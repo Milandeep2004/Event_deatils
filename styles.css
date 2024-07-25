@@ -1,0 +1,227 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #08ceec, #7f7fd3, #385be7);
+    color: white;
+    padding: 30px 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #47a5b8;
+    margin-top: 0;
+    font-size: 1.8em;
+    border-bottom: 2px solid #235d66;
+    padding-bottom: 5px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+a {
+    color: #4ab7c8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 3px;
+    font-size: 0.9em;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Styles for the accordion */
+button.accordion {
+    background: linear-gradient(135deg, #6ed4e3, #8989f2, #3ddaeb);
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px; /* Reduced padding */
+    width: auto; /* Changed from 100% to auto */
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 14px; /* Reduced font size */
+    transition: 0.4s;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+button.accordion.active, button.accordion:hover {
+    background: linear-gradient(135deg, #3b8d99, #5f6b6b, #a1a2a6);
+}
+
+div.panel {
+    padding: 10px 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border-radius: 0 0 5px 5px;
+    border-top: 1px solid #ddd;
+}
+
+/* Countdown Timer Styles */
+#countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #3b8d99;
+    padding: 10px;
+    border-radius: 10px;
+    background: #cef2f6;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+input[type="submit"] {
+    margin-top: 20px;
+    padding: 10px;
+    background: linear-gradient(135deg, #3b8d99, #6b6b83, #a1a2a6);
+    border: none;
+    color: white;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(135deg, #3b8d99, #5f6b6b, #a1a2a6);
+}
+.popup {
+    display: none; 
+    position: fixed;
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.popup-content {
+    background-color: #fff;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    form label, form input, form select, form input[type="submit"] {
+        font-size: 0.9em;
+    }
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    button.accordion {
+        font-size: 12px; /* Further reduced font size for smaller screens */
+        padding: 8px 12px; /* Adjusted padding for smaller screens */
+    }
+
+    #countdown {
+        font-size: 1.2em; /* Adjusted font size for smaller screens */
+        padding: 8px; /* Adjusted padding for smaller screens */
+    }
+}
